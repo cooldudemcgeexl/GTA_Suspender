@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ProcessUtil;
 
 namespace GTA_Suspender
 {
@@ -20,21 +21,66 @@ namespace GTA_Suspender
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            int gtaID = Get_GTAID();
-            Console.WriteLine(gtaID);
+            int gtaId = Get_GTAID();
+            if (gtaId > 0)
+            {
+                Process gtaProcess = Process.GetProcessById(gtaId);
+                Console.WriteLine(gtaProcess);
+            }
+            else
+            {
+                button1.Enabled = false;
+                label1.Text = "GTA V Not Found. Are you sure \r\n you are running the game?";
+                label1.ForeColor = Color.FromName("Red");
+                Find_GTA_Retry();
+            }
+            //gtaProcess.Suspend();
+            //await Task.Delay(5000);
+            //gtaProcess.Resume();
         }
         private int Get_GTAID()
         {
-            Process[] gtaProcess = Process.GetProcessesByName("GTA5");
+            Process[] processList = Process.GetProcessesByName("GTA5");
             //Console.WriteLine(gtaProcess[0]);
-            int gtaID = gtaProcess[0].Id;
+            if (processList.Length == 0)
+            {
+                return 0;
+            }
+            int gtaID = processList[0].Id;
             //Console.WriteLine(gtaID);
             return gtaID;
         }
 
-        private void Suspend_Game(int processID)
+       private async void Find_GTA_Retry()
         {
-            N
+            int gtaID = Get_GTAID();
+            while (gtaID == 0)
+            {
+                await Task.Delay(500);
+                gtaID = Get_GTAID();
+            }
+            label1.Text = "GTA V is currently running.";
+            label1.ForeColor = Color.FromName("Black");
+            button1.Enabled = true;
+        }
+
+        private async void button1_Click(object sender, EventArgs e)
+        {
+            int suspendTime = (int)(numericUpDown1.Value * 1000);
+            int gtaId = Get_GTAID();
+            Process gtaProcess = Process.GetProcessById(gtaId);
+            gtaProcess.Suspend();
+            label1.Text = "GTA V suspended!";
+            label1.ForeColor = Color.FromName("Green");
+            await Task.Delay(suspendTime);
+            gtaProcess.Resume();
+            label1.Text = "GTA V is currently running.";
+            label1.ForeColor = Color.FromName("Black");
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 

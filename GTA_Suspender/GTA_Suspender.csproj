@@ -79,5 +79,11 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="D:\Downloads\ProcessUtil-master\ProcessUtil-master\ProcessUtil\ProcessUtil.csproj">
+      <Project>{9008e9fe-464a-42a4-88c7-c2664dc6b341}</Project>
+      <Name>ProcessUtil</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
