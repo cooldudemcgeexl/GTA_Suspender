@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30104.148
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GTA_Suspender", "GTA_Suspender\GTA_Suspender.csproj", "{A40A11AB-49D5-401A-AD70-BF7C9B68860B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A40A11AB-49D5-401A-AD70-BF7C9B68860B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A40A11AB-49D5-401A-AD70-BF7C9B68860B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A40A11AB-49D5-401A-AD70-BF7C9B68860B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A40A11AB-49D5-401A-AD70-BF7C9B68860B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4573C5DA-7057-49D3-9B3B-3FA9F66DA0F8}
+	EndGlobalSection
+EndGlobal
