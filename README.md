@@ -13,3 +13,4 @@ Download and extract the latest release .zip and run GTA_Suspender.exe.
 GTA Suspender is open to contributions
 
 ## License
+This project is licensed under the GNU GPL v3 License - see [LICENSE](LICENSE) for details.
