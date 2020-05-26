@@ -59,5 +59,15 @@ namespace GTA_Suspender.Properties {
                 resourceCulture = value;
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
+        /// </summary>
+        internal static System.Drawing.Icon suspendericon {
+            get {
+                object obj = ResourceManager.GetObject("suspendericon", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
+            }
+        }
     }
 }
