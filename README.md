@@ -8,7 +8,7 @@ Download and extract the latest release .zip and run GTA_Suspender.exe.
 ## Usage
 1. Launch GTA_Suspender while running GTA Online.
 2. Choose suspension duration using the "Suspend Time" box.
-  * Default is 10 seconds, which I have found to work best for disconnecting all players.
+	  * Default is 10 seconds, which I have found to work best for disconnecting all players.
 3. Press "Suspend Game" and wait. All other players should disconnect upon resuming the game.
 
 ## Built With
